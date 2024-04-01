@@ -1,2 +1,1 @@
 # Algorithms
-Added Merge Sort
