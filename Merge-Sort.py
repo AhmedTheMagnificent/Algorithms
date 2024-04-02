@@ -1,4 +1,4 @@
-def mergesort(array):
+def MergeSort(array):
     if len(array) <= 1:
         return array
     else:
