@@ -2,8 +2,8 @@ def MergeSort(array):
     if len(array) <= 1:
         return array
     else:
-        left = mergesort(array[:len(array)//2])
-        right = mergesort(array[len(array)//2:])
+        left = MergeSort(array[:len(array)//2])
+        right = MergeSort(array[len(array)//2:])
         sorted = []
         i = j = 0
         while i < len(left) and j < len(right):
