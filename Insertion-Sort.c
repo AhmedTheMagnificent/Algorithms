@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void InsertionSort(int array[], int n){
+void InsertionSort(int *array, int n){
     int i, j, key;
     for(i = 0; i < n; i++){
         key = array[i];

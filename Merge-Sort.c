@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void Merge(int array[], int left[], int right[], int x, int y){
+void Merge(int *array, int *left, int *right, int x, int y){
     int i, j, k;
     i = 0;
     j = 0;
@@ -29,7 +29,7 @@ void Merge(int array[], int left[], int right[], int x, int y){
     }
 }
 
-void MergeSort(int array[], int n){
+void MergeSort(int *array, int n){
     if(n <= 1) return;
     int mid = n / 2;
     int left[mid], right[n - mid];

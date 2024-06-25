@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void SelectionSort(int array[], int n){
+void SelectionSort(int *array, int n){
     int i, j, minindex, temp;
     for(i = 0; i < n; i++){
         minindex = i;
