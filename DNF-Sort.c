@@ -6,6 +6,7 @@ void swap(int *x, int *y){
     *x = *y;
     *y = temp;
 }
+
 void DNFSort(int *array, int n){
     int low = 0, mid = 0, high = n - 1;
     while(mid <= high){
