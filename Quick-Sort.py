@@ -15,8 +15,9 @@ def partition(array):
             array[i], array[j] = array[j], array[i]
             i += 1
             j += 1
-    array[0], array[i - 1] = array[i - 1], array[0]
-    return i - 1
+    i -= 1
+    array[0], array[i] = array[i], array[0]
+    return i
 
 """
     Quick Sort is a divide-and-conquer algorithm that selects a 'pivot' element from the array and partitions
