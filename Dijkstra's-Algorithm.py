@@ -13,29 +13,22 @@ class Graph():
         self.graph[u][v] = w
         self.graph[v][u] = w
         
-    def dijkstra(self, s):
-        visited = set()
-        distance = {x: float('INF') for x in self.graph}
-        distance[s] = 0
+    def dijkstra(self, start):
+        heap = []
+        heapq.heappush(heap, (0, start))
+        distances = {vertex : float("inf") for vertex in self.graph.keys()}
+        distances[start] = 0
+        while heap:
+            currentDistance, currentVertex = heapq.heappop(heap)
+            for neighbour, weight in self.graph[currentVertex].items():
+                distance = weight + currentDistance
+                if distance < distances[neighbour]:
+                    distances[neighbour] = distance
+                    heapq.heappush(heap, (distance, neighbour))
+        return distances
+    
+    
         
-        min_heap = [(0, s)]  # (distance, node)
-        
-        while min_heap:
-            current_dist, current_node = heapq.heappop(min_heap)
-            
-            if current_node in visited:
-                continue
-            
-            visited.add(current_node)
-            
-            for neighbor, weight in self.graph[current_node].items():
-                if neighbor not in visited:
-                    new_dist = current_dist + weight
-                    if new_dist < distance[neighbor]:
-                        distance[neighbor] = new_dist
-                        heapq.heappush(min_heap, (new_dist, neighbor))
-        
-        return distance
 
 # Example usage
 g = Graph()

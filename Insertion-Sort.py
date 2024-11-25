@@ -8,6 +8,9 @@ def InsertionSort(array):
         array[j + 1] = key
     return array
 
+arr = [5,4,3,2,1]
+new = InsertionSort(arr)
+
 """
     Insertion Sort is a simple and efficient comparison-based sorting algorithm. It builds the final sorted array one item
     at a time, with the input elements being taken one by one and inserted into their correct position.
