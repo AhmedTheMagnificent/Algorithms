@@ -15,7 +15,7 @@ void BubbleSort(int *array, int n){
 
 int main(){
     int array[] = {4,2,3,1};
-    int n = sizeof(array) /  sizeof(array[0]);
+    int n = sizeof(array) / sizeof(array[0]);
     BubbleSort(array, n);
     for(int i = 0; i < n; i++){
         printf("%d, ", array[i]);
